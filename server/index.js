@@ -26,7 +26,7 @@ app.post("/api/send_email", function(req, res) {
   mailer.sendOne("droids", messageInfo, locals);
 
   res.send('{"message":"Email sent."}');
-}
+});
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('/', function(request, response) {
