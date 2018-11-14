@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mars/heroku-cra-node.git"
+    "url": "https://git.heroku.com/mighty-bastion-52325.git"
   },
   "keywords": [
     "node",
