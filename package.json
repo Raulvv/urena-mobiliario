@@ -14,7 +14,12 @@
     "client/node_modules"
   ],
   "dependencies": {
-    "express": "^4.16.3"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "email-templates": "^5.0.2",
+    "express": "^4.16.3",
+    "node-mailjet": "^3.3.1",
+    "nodemailer": "^4.6.8"
   },
   "repository": {
     "type": "git",

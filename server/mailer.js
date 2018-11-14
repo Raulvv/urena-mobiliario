@@ -1,38 +1,45 @@
-const path = require("path");
-const templatesDir = path.resolve(__dirname, "views/mailer");
-const Email = require("email-templates");
+const nodemailer = require('nodemailer');
 
-const mailjet = require("node-mailjet").connect(
-  process.env.MJ_APIKEY_PUBLIC,
-  process.env.MJ_APIKEY_PRIVATE
-);
+class Mailer {
+  constructor() {
+    const creds = {
+      USER: 'raul.vega.dv@gmail.com',
+      PASS: 'gudvhlqnlrexajoi'
+    };
 
-const sendEmail = (messageInfo, text, html) => {
-  return mailjet.post("send", { version: "v3.1" }).request({
-    Messages: [
-      {
-        From: { Email: messageInfo.fromEmail, Name: messageInfo.fromName },
-        To: [ { Email: messageInfo.email } ],
-        Subject: messageInfo.subject,
-        TextPart: text,
-        HTMLPart: html
+    const transport = {
+      host: 'smtp.gmail.com',
+      auth: {
+        user: creds.USER,
+        pass: creds.PASS
       }
-    ]
-  });
+    };
 
-};
+    this.transporter = nodemailer.createTransport(transport);
+  }
 
-exports.sendOne = function(templateName, messageInfo, locals) {
-   const email = new Email({
-    views: { root: templatesDir, options: { extension: "ejs" } }
-  });
+  sendEmail(mail) {
+    this.transporter.verify((error, success) => {
+      if (error) {
+        console.log(error);
+      } else {
+        this.transporter.sendMail(mail, (err, data) => {
+          console.log('sending...');
+          if (err) {
+            res.json({
+              msg: 'fail'
+            })
+          } else {
+            console.log('success');
+            res.json({
+              msg: 'success'
+            })
+          }
+        })
+        console.log('Server is ready to take messages');
+      }
+    });
+  }
+}
 
-  return Promise.all([
-    email.render(`${templateName}/html`, locals),
-    email.render(`${templateName}/text`, locals)
-  ])
-    .then(([html, text]) => {
-      return sendEmail(messageInfo, text, html);
-    })
-    .catch(console.error);
-};
+module.exports = Mailer;
