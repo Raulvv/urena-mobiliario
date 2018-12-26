@@ -33,8 +33,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  width: 80%;
   padding: 50px 0;
+  margin: 0 auto;
 }
 
 .MainContainer-mainInfo-image {
@@ -59,8 +61,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   padding: 0 50px;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -78,16 +81,53 @@
   padding: 30px;
 }
 
-.MainContainer-contact-form input, .MainContainer-contact-form textarea {
-  width: 90%;
+.MainContainer-contact-form form {
+  width: 60%;
+}
+
+.MainContainer-contact-form .form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 10px 0;
+}
+
+.MainContainer-contact-form .form-group input,  .MainContainer-contact-form .form-group textarea {
+  width: 50%;
+}
+
+.MainContainer-values {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MainContainer-values-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.MainContainer-values-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+}
+
+.MainContainer-values-item img {
+  width: 60px;
+  height: 60px;
 }
 
 .Footer-container {
   display: flex;
   background-color: #253469;
-  min-height: 100px;
-  height: 150px;
+  height: 80px;
   width: 80%;
   color: white;
   padding: 0 50px;
