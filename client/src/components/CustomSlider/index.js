@@ -3,23 +3,23 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-function SampleNextArrow(props) {
+function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "red" }}
+      style={{ ...style }}
       onClick={onClick}
     />
   );
 }
 
-function SamplePrevArrow(props) {
+function PrevArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green" }}
+      style={{ ...style }}
       onClick={onClick}
     />
   );
@@ -35,29 +35,29 @@ export default class CustomSlider extends React.Component {
       infinite: true,
       slidesToShow: 1,
       speed: 500,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
     };
     return (
-      <section style={{ margin: '50px 0' }}>
+      <section className="slider-wrapper">
         <Slider {...settings}>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" style={{ width: 500, margin: 'auto' }} />
+            <img src="images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" style={{ width: 500, margin: 'auto' }} />
+            <img src="images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" style={{ width: 500, margin: 'auto' }} />
+            <img src="images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" style={{ width: 500, margin: 'auto' }} />
+            <img src="images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" style={{ width: 500, margin: 'auto' }} />
+            <img src="images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" style={{ width: 500, margin: 'auto' }} />
+            <img src="images/multipuesto.jpg" alt="slide" />
           </div>
         </Slider>
       </section>
