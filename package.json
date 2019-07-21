@@ -6,7 +6,8 @@
     "node": "8.9.x"
   },
   "scripts": {
-    "start": "node server",
+    "start": "npm run build-client && node server",
+    "build-client": "cd client && npm run build",
     "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
