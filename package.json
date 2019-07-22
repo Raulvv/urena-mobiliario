@@ -20,18 +20,14 @@
     "email-templates": "^5.0.2",
     "express": "^4.16.3",
     "node-mailjet": "^3.3.1",
-    "nodemailer": "^4.6.8"
+    "nodemailer": "^4.6.8",
+    "react": "^16.8.6",
+    "react-router-dom": "^5.0.1"
   },
   "repository": {
     "type": "git",
     "url": "https://git.heroku.com/mighty-bastion-52325.git"
   },
-  "keywords": [
-    "node",
-    "heroku",
-    "create-react-app",
-    "react"
-  ],
   "license": "MIT",
   "devDependencies": {}
 }
