@@ -42,22 +42,22 @@ export default class CustomSlider extends React.Component {
       <section className="slider-wrapper">
         <Slider {...settings}>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" />
+            <img src="/public/images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" />
+            <img src="/public/images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" />
+            <img src="/public/images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" />
+            <img src="/public/images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" />
+            <img src="/public/images/multipuesto.jpg" alt="slide" />
           </div>
           <div>
-            <img src="images/multipuesto.jpg" alt="slide" />
+            <img src="/public/images/multipuesto.jpg" alt="slide" />
           </div>
         </Slider>
       </section>

@@ -1,34 +1,29 @@
 {
   "name": "urena-mobiliario",
-  "version": "1.0.0",
-  "description": "Urena mobiliario web page",
+  "version": "0.1.0",
+  "private": true,
   "engines": {
     "npm": "5.6.0",
     "node": "10.16.0"
   },
-  "scripts": {
-    "start": "npm run build-client && node server",
-    "build-client": "cd client && npm run build",
-    "heroku-postbuild": "cd client/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
-  },
-  "cacheDirectories": [
-    "node_modules",
-    "client/node_modules"
-  ],
   "dependencies": {
     "axios": "^0.19.0",
-    "body-parser": "^1.18.3",
-    "email-templates": "^5.0.2",
-    "express": "^4.16.3",
-    "node-mailjet": "^3.3.1",
-    "nodemailer": "^4.6.8",
-    "react": "^16.8.6",
-    "react-router-dom": "^5.0.1"
+    "nodemailer": "^6.3.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-mail-form": "^1.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "2.1.1",
+    "react-slick": "^0.23.2",
+    "slick-carousel": "^1.8.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://git.heroku.com/mighty-bastion-52325.git"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "license": "MIT",
-  "devDependencies": {}
+  "eslintConfig": {
+    "extends": "react-app"
+  }
 }
