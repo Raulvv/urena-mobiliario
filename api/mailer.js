@@ -25,22 +25,16 @@ class Mailer {
   sendEmail(mail) {
     this.transporter.verify((error, success) => {
       if (error) {
-        console.log(error);
+        throw error;
       }
 
       this.transporter.sendMail(mail, (err, data) => {
-        console.log('sending...');
         if (err) {
-          res.json({
-            msg: 'fail'
-          })
+          return { msg: 'fail' };
         }
 
-        res.json({
-          msg: 'success'
-        });
+        return { msg: 'success' };
       })
-      console.log('Server is ready to take messages');
     });
   }
 }
