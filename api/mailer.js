@@ -1,4 +1,6 @@
-export default function () {
+const nodemailer = require('nodemailer');
+
+module.exports = function () {
   return new Mailer();
 }
 

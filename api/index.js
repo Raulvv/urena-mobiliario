@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const mailerController = require('./mailer');
 console.log("Mailer", mailerController);
 
