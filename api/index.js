@@ -1,4 +1,10 @@
-module.exports = function(req, res) {
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+
+app.use(bodyParser.json());
+
+app.post('/api/mailer', function(req, res) {
   const name = req.body.name
   const company = req.body.company
   const phone = req.body.phone
@@ -12,6 +18,11 @@ module.exports = function(req, res) {
     subject: 'New Message from Contact Form',
     text: content
   }
+  console.log("Mailer", Mailer);
+  // new Mailer().sendEmail(mail);
+});
 
-  new Mailer().sendEmail(mail);
-};
+
+app.listen(process.env.PORT || 3000, () => {
+  console.log('Server listening on PORT', process.env.PORT || 3000);
+});
