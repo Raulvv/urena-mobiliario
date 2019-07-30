@@ -19,7 +19,7 @@ export default class ContactForm extends Component {
 
     axios({
       method: "POST",
-      url:`/api/send_email`,
+      url:`/api/mailer`,
       data: this.state.inputValues
     }).then((response)=>{
       console.log({response});
