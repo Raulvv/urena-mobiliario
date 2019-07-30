@@ -17,8 +17,6 @@ export default class ContactForm extends Component {
   handleSubmit(e){
     e.preventDefault();
 
-    let apiUrl = process.env["MAIL_SERVICE_URL"] ? `${process.env["MAIL_SERVICE_URL"]}/api/send_email` : `/api/send_email`;
-
     axios({
       method: "POST",
       url:`/api/send_email`,
