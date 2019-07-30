@@ -3,6 +3,7 @@
     "name": "urena-mobiliario",
     "builds": [
       { "src": "api/**/*.js", "use": "@now/node" },
+      { "src": "public/*.html", "use": "@now/static" }
     ],
     "routes": [
       {
