@@ -16,10 +16,12 @@ export default class ContactForm extends Component {
 
   handleSubmit(e){
     e.preventDefault();
-    console.log(process.env);
+
+    let apiUrl = process.env["MAIL_SERVICE_URL"] ? `${process.env["MAIL_SERVICE_URL"]}/api/send_email` : `/api/send_email`;
+
     axios({
       method: "POST",
-      url:`${process.env.MAIL_SERVICE_URL}/api/send_email`,
+      url:`/api/send_email`,
       data: this.state.inputValues
     }).then((response)=>{
       console.log({response});
