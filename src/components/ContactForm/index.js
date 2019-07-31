@@ -5,13 +5,11 @@ import TextareaForm from '../TextareaForm';
 
 export default class ContactForm extends Component {
   state = {
-    inputValues: {
-      name: "",
-      company: "",
-      phone: "",
-      email: "",
-      message: "",
-    }
+    name: "",
+    company: "",
+    phone: "",
+    email: "",
+    message: ""
   };
 
   handleSubmit(e){
@@ -19,16 +17,14 @@ export default class ContactForm extends Component {
 
     axios({
       method: "POST",
-      url:`/api/mailer`,
-      data: this.state.inputValues
+      url:`/api/index`,
+      data: this.state
     }).then((response)=>{
-      console.log({response});
-      if (response.data.msg === 'success'){
-        alert("Message Sent.");
-        this.resetForm()
-      }else if(response.data.msg === 'fail'){
+      if(response.data.msg === 'fail'){
         alert("Message failed to send.")
       }
+
+      this.resetForm();
     })
   }
 
@@ -36,23 +32,35 @@ export default class ContactForm extends Component {
     document.getElementById('contact-form').reset();
   }
 
-  onInputChange(event) {
-    this.setState({
-      inputValues: {
-        [event.target.id]: event.target.value
-      }
-    });
+  onNameChange(event) {
+    this.setState({name: event.target.value});
+  }
+
+  onEmailChange(event) {
+    this.setState({email: event.target.value});
+  }
+
+  onPhoneChange(event) {
+    this.setState({phone: event.target.value});
+  }
+
+  onCompanyChange(event) {
+    this.setState({company: event.target.value});
+  }
+
+  onMessageChange(event) {
+    this.setState({message: event.target.value});
   }
 
   render() {
     return (
       <div className="MainContainer-contact-form">
         <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-          <InputForm label="Nombre" id="name" onChange={this.onInputChange.bind(this)} />
-          <InputForm label="Empresa" id="company" onChange={this.onInputChange.bind(this)} />
-          <InputForm label="Telefono" id="phone" onChange={this.onInputChange.bind(this)} />
-          <InputForm label="Email" id="email" onChange={this.onInputChange.bind(this)} type="email" />
-          <TextareaForm label="Consulta" id="message" onChange={this.onInputChange.bind(this)} />
+          <InputForm label="Nombre" id="name" onChange={this.onNameChange.bind(this)} />
+          <InputForm label="Empresa" id="company" onChange={this.onCompanyChange.bind(this)} />
+          <InputForm label="Telefono" id="phone" onChange={this.onPhoneChange.bind(this)} />
+          <InputForm label="Email" id="email" onChange={this.onEmailChange.bind(this)} type="email" />
+          <TextareaForm label="Consulta" id="message" onChange={this.onMessageChange.bind(this)} />
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>

@@ -1,32 +1,30 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mailerController = require('./mailer');
-console.log("Mailer", mailerController);
+import Mailer from './mailer';
 
-const app = express();
-const mailer = mailerController();
+const mailer = new Mailer();
 
-app.use(bodyParser.json());
-
-app.post('/api/mailer', function(req, res) {
-  const name = req.body.name
-  const company = req.body.company
-  const phone = req.body.phone
-  const email = req.body.email
-  const message = req.body.message
-  const content = `name: ${name} \n email: ${email} \n message: ${message} \n company: ${company} \n phone: ${phone} `
+module.exports = async function(req, res) {
+  console.log({ req: req.body });
+  const name = req.body.name;
+  const company = req.body.company;
+  const phone = req.body.phone;
+  const email = req.body.email;
+  const message = req.body.message;
+  const content = `
+  name: ${name}\n
+  email: ${email}\n
+  company: ${company}\n
+  phone: ${phone}\n
+  message: ${message}
+  `;
 
   var mail = {
     from: name,
-    to: 'raul.vega.dv@gmail.com',  //Change to email address that you want to receive messages on
-    subject: 'New Message from Contact Form',
+    to: 'umobiliario@umobiliario.com',
+    subject: `Contact from ${name}`,
     text: content
-  }
+  };
 
-  return mailer.sendEmail(mail);
-});
+  const response = await mailer.sendEmail(mail);
 
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server listening on PORT', process.env.PORT || 3000);
-});
+  return res.json(response);
+}
