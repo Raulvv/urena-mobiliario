@@ -38,26 +38,15 @@ export default class CustomSlider extends React.Component {
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />
     };
+    console.log("HOLA", process.env);
     return (
       <section className="slider-wrapper">
         <Slider {...settings}>
           <div>
-            <img src="/public/images/multipuesto.jpg" alt="slide" />
+            <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} alt="slide" />
           </div>
           <div>
-            <img src="/public/images/multipuesto.jpg" alt="slide" />
-          </div>
-          <div>
-            <img src="/public/images/multipuesto.jpg" alt="slide" />
-          </div>
-          <div>
-            <img src="/public/images/multipuesto.jpg" alt="slide" />
-          </div>
-          <div>
-            <img src="/public/images/multipuesto.jpg" alt="slide" />
-          </div>
-          <div>
-            <img src="/public/images/multipuesto.jpg" alt="slide" />
+            <img src={`${process.env.REACT_APP_STATIC_PATH}/ROPEROS/ureña02_ok.jpg`} alt="slide" />
           </div>
         </Slider>
       </section>
