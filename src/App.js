@@ -16,9 +16,6 @@ class App extends Component {
         <MainContainer>
           <CustomSlider />
           <Separator />
-          <ValuesList />
-          <Separator />
-          <Separator />
           <ProductLineExpositor />
         </MainContainer>
         <Footer />
