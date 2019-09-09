@@ -38,7 +38,7 @@ export default class CustomSlider extends React.Component {
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />
     };
-    console.log("HOLA", process.env);
+
     return (
       <section className="slider-wrapper">
         <Slider {...settings}>

@@ -2,6 +2,27 @@
   box-sizing: border-box;
 }
 
+.close-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.close-wrapper div {
+  width: 30px;
+  height: 30px;
+  float: right;
+  margin: 10px;
+}
+
+.close-wrapper:hover {
+  cursor: pointer;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+}
+
 .App {
   align-items: center;
   display: flex;
@@ -218,6 +239,48 @@
   border-radius: 50%;
   height: 180px;
   width: 300px;
+}
+
+.ModalCategory-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+}
+
+.MiniatureSlider-wrapper {
+  width: 80%;
+  height: 85vh;
+  margin: 20px auto;
+  background-color: white;
+}
+
+.MiniatureSlider-wrapper .slick-dots {
+  display: flex !important;
+  justify-content: center;
+}
+
+.MiniatureSlider-wrapper .slick-dots li {
+  width: 80px;
+}
+
+.MiniatureSlider-wrapper .slick-list div:focus {
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+.MiniatureSlider-wrapper .slick-list img {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.MiniatureSlider-wrapper .slick-thumb img {
+  width: 80px;
 }
 
 .Footer-container {

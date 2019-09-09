@@ -5,8 +5,8 @@ import MainContainer from './components/MainContainer';
 import Footer from './components/Footer';
 import CustomSlider from './components/CustomSlider';
 import Separator from './components/Separator';
-import ValuesList from './components/ValuesList';
 import ProductLineExpositor from './components/ProductLineExpositor';
+import ModalCategory from "./components/ModalCategory";
 
 class App extends Component {
   render() {
@@ -18,6 +18,7 @@ class App extends Component {
           <Separator />
           <ProductLineExpositor />
         </MainContainer>
+        <ModalCategory />
         <Footer />
       </div>
     );
