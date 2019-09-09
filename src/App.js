@@ -3,10 +3,9 @@ import './App.css';
 import Header from './components/Header';
 import MainContainer from './components/MainContainer';
 import Footer from './components/Footer';
-import CustomSlider from './components/CustomSlider';
-import Separator from './components/Separator';
-import ProductLineExpositor from './components/ProductLineExpositor';
 import ModalCategory from "./components/ModalCategory";
+import Filter from './components/Filter';
+import ProductLineExpositor from './components/ProductLineExpositor';
 
 class App extends Component {
   render() {
@@ -14,11 +13,14 @@ class App extends Component {
       <div className="App">
         <Header />
         <MainContainer>
-          <CustomSlider />
-          <Separator />
-          <h2 className="ProductLineExpositor-title">Encuentra lo que buscas</h2>
-          <Separator />
-          <ProductLineExpositor />
+            <Filter />
+            <section id="categories">
+                <ProductLineExpositor title={"Mesas"} numberOfItems={3} />
+                <ProductLineExpositor title={"Roperos"} numberOfItems={1} />
+                <ProductLineExpositor title={"Cajoneras"} numberOfItems={2} />
+                <ProductLineExpositor title={"Archivo"} numberOfItems={2} />
+                <ProductLineExpositor title={"Armarios"} numberOfItems={3} />
+            </section>
         </MainContainer>
         <ModalCategory />
         <Footer />

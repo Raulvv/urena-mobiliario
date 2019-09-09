@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import ContactPage from './components/ContactPage';
+import CategoriesPage from "./components/CategoriesPage";
 
 const routing = (
   <Router>

@@ -75,9 +75,9 @@
 .Nav-container {
   display: flex;
   width: 35%;
-  justify-content: space-around;
   min-width: 500px;
   margin-left: auto;
+  justify-content: space-evenly;
 }
 
 .Nav-item {
@@ -93,6 +93,38 @@
 
 .Nav-item a, .Nav-item a:visited, .Nav-item a:active {
   color: #121314;
+  text-decoration: none;
+}
+
+.Filter-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.Filter-title {
+  margin: 20px auto 20px;
+}
+
+.Filter-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 65%;
+  margin: 0 auto 30px;
+}
+
+.Filter-item {
+  align-items: center;
+  background-color: #6180ef;
+  color: white;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  width: 150px;
+  border-radius: 8px;
+}
+
+.Filter-item a, .Filter-item a:visited, .Filter-item a:active {
+  color: white;
   text-decoration: none;
 }
 
@@ -196,43 +228,54 @@
   width: 50%;
 }
 
+#categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px 0;
+}
+
 .ProductLineExpositor {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 50px 0;
+  margin-bottom: 30px;
 }
 
 .ProductLineExpositor-list {
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 80%;
+  border-top: 1px solid rgba(15, 114, 191, 0.6);
+  width: 90%;
+  padding-top: 22px;
 }
 
 .ProductLineExpositor-title {
-  margin: 40px auto;
+  margin: 10px auto;
 }
 
 .ProductLine-item {
   align-items: center;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   position: relative;
-  cursor: pointer;
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.ProductLine-item p {
+  width: 70%;
 }
 
 .ProductLine-item-title {
   display: flex;
-  width: 100%;
+  width: 180px;
   height: 180px;
   background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 0;
-  left: 0;
   border-radius: 50%;
 }
 
