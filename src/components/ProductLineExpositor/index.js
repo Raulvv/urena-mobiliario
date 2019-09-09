@@ -4,8 +4,8 @@ import ProductLine from '../ProductLine';
 export default class ProductLineExpositor extends Component {
   render() {
     return (
-      <section className="MainContainer-ProductLineExpositor">
-        <section className="MainContainer-ProductLineExpositor-list">
+      <section id="categories" className="ProductLineExpositor">
+        <section className="ProductLineExpositor-list">
           <ProductLine
             title="Mesas"
             imageUrl={`${process.env.REACT_APP_STATIC_PATH}/SERIE ARCO/cam7_20.jpg`}
@@ -22,11 +22,6 @@ export default class ProductLineExpositor extends Component {
             title="Archivo"
             imageUrl={`${process.env.REACT_APP_STATIC_PATH}/SERIE ZERO/multipuesto.jpg`}
           />
-          <div className="MainContainer-ProductLineExpositor-title">
-            <h2>
-                Categorias
-            </h2>
-          </div>
           <ProductLine
             title="Roperos"
             imageUrl={`${process.env.REACT_APP_STATIC_PATH}/SERIE ZERO/multipuesto.jpg`}

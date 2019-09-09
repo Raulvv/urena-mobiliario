@@ -2,16 +2,15 @@
   box-sizing: border-box;
 }
 
-.close-wrapper {
+.modal-head-wrapper {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
-.close-wrapper div {
+.close-wrapper {
   width: 30px;
   height: 30px;
-  float: right;
-  margin: 10px;
+  margin: 10px 10px 10px auto;
 }
 
 .close-wrapper:hover {
@@ -21,6 +20,25 @@
 .close-icon {
   width: 30px;
   height: 30px;
+}
+
+.download-wrapper {
+  margin: 20px 0 0 20px;
+}
+
+.download-wrapper img {
+  width: 60px;
+  height: 60px;
+}
+
+.download-wrapper button {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.download-wrapper button:hover {
+  cursor: pointer;
+  outline: none;
 }
 
 .App {
@@ -55,6 +73,10 @@
 }
 
 .Nav-container {
+  display: flex;
+  width: 35%;
+  justify-content: space-around;
+  min-width: 500px;
   margin-left: auto;
 }
 
@@ -66,6 +88,7 @@
   height: 50px;
   justify-content: center;
   width: 150px;
+  border-radius: 8px;
 }
 
 .Nav-item a, .Nav-item a:visited, .Nav-item a:active {
@@ -173,30 +196,24 @@
   width: 50%;
 }
 
-.MainContainer-ProductLineExpositor {
+.ProductLineExpositor {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: 50px 0;
 }
 
-.MainContainer-ProductLineExpositor-list {
+.ProductLineExpositor-list {
   align-items: center;
   display: flex;
-  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
 }
 
-.MainContainer-ProductLineExpositor-title {
-  display: flex;
-  height: 180px;
-  align-self: flex-end;
-}
-
-.MainContainer-ProductLineExpositor-title h2 {
-  margin: auto;
+.ProductLineExpositor-title {
+  margin: 40px auto;
 }
 
 .ProductLine-item {
@@ -205,40 +222,38 @@
   flex-direction: column;
   justify-content: space-around;
   position: relative;
-  width: 30%;
+  cursor: pointer;
 }
 
 .ProductLine-item-title {
-  display: none;
+  display: flex;
   width: 100%;
   height: 180px;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 50%;
-  cursor: pointer;
 }
 
 .ProductLine-item:hover .ProductLine-item-title {
-  display: flex;
+  display: none;
 }
 
 .ProductLine-item-title h3 {
-  width: 30%;
   margin: auto;
   text-align: center;
 }
 
 .ProductLine-img-preview {
   height: 180px;
-  width: 300px;
+  width: 180px;
 }
 
 .ProductLine-img-preview img {
   border-radius: 50%;
   height: 180px;
-  width: 300px;
+  width: 180px;
 }
 
 .ModalCategory-wrapper {
@@ -254,7 +269,7 @@
 
 .MiniatureSlider-wrapper {
   width: 80%;
-  height: 85vh;
+  height: 90vh;
   margin: 20px auto;
   background-color: white;
 }

@@ -26,8 +26,14 @@ export default class MiniatureSlider extends React.Component {
 
         return (
             <div className="MiniatureSlider-wrapper">
-                <div className="close-wrapper">
-                    <div>
+                <div className="modal-head-wrapper">
+                    <div className="download-wrapper">
+                        <button type="submit"
+                                onClick={() => window.location.href=`${process.env.REACT_APP_STATIC_PATH}/SERIE LOOK/catalogo UREÑA.pdf`}>
+                            <img src="https://cdn1.iconfinder.com/data/icons/file-formats-7/502/Untitled-4-512.png" alt="Download pdf"/>
+                        </button>
+                    </div>
+                    <div className="close-wrapper">
                         <img className="close-icon" src="https://static.thenounproject.com/png/6448-200.png" onClick={() => this.props.onClose.bind(this)} />
                     </div>
                 </div>

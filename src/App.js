@@ -16,6 +16,8 @@ class App extends Component {
         <MainContainer>
           <CustomSlider />
           <Separator />
+          <h2 className="ProductLineExpositor-title">Encuentra lo que buscas</h2>
+          <Separator />
           <ProductLineExpositor />
         </MainContainer>
         <ModalCategory />
