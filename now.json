@@ -10,5 +10,10 @@
         "dest": "/images/$1"
       },
       { "src": "/public/favicon.ico", "dest": "/favicon.ico" }
-    ]
+    ],
+    "build": {
+      "env": {
+        "REACT_APP_STATIC_PATH": "./public/images"
+      }
+    }
   }
