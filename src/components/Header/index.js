@@ -3,7 +3,6 @@ import Nav from '../Nav';
 
 export default class Header extends Component {
   render() {
-    console.log('HOLA', process.env);
     return (
       <header className="Header-container">
         <div className="Header-logo">

@@ -109,6 +109,7 @@
   display: flex;
   justify-content: space-evenly;
   width: 65%;
+  min-width: 865px;
   margin: 0 auto 30px;
 }
 
@@ -121,6 +122,7 @@
   justify-content: center;
   width: 150px;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .Filter-item a, .Filter-item a:visited, .Filter-item a:active {

@@ -9,7 +9,7 @@ export default class MiniatureSlider extends React.Component {
             customPaging: function(i) {
                 return (
                     <a>
-                        <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
+                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
                     </a>
                 );
             },
@@ -34,21 +34,21 @@ export default class MiniatureSlider extends React.Component {
                         </button>
                     </div>
                     <div className="close-wrapper">
-                        <img className="close-icon" src="https://static.thenounproject.com/png/6448-200.png" onClick={() => this.props.onClose.bind(this)} />
+                        <img alt={""} className="close-icon" src="https://static.thenounproject.com/png/6448-200.png" onClick={() => this.props.onClose.bind(this)} />
                     </div>
                 </div>
                 <Slider {...settings}>
                     <div>
-                        <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
+                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
                     </div>
                     <div>
-                        <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
+                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
                     </div>
                     <div>
-                        <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
+                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
                     </div>
                     <div>
-                        <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
+                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
                     </div>
                 </Slider>
             </div>
