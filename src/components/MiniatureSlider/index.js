@@ -40,7 +40,7 @@ export default class MiniatureSlider extends React.Component {
                 <div className="modal-head-wrapper">
                     <div className="download-wrapper">
                         <button type="submit"
-                                onClick={() => window.location.href=`${process.env.REACT_APP_STATIC_PATH}/SERIE LOOK/catalogo UREÑA.pdf`}>
+                                onClick={() => window.location.href=`${process.env.REACT_APP_STATIC_PATH}/${selectedLine}/${selectedLine}.pdf`}>
                             <img src="https://cdn1.iconfinder.com/data/icons/file-formats-7/502/Untitled-4-512.png" alt="Download pdf"/>
                         </button>
                     </div>
