@@ -48,13 +48,13 @@ export default class ProductLineExpositor extends Component {
 
     for(let i = 0; i < numberOfItems; i++) {
       let line = translations[this.props.title.toUpperCase()][i];
-      console.log(line);
       list.push(
           <ProductLine
               key={line.name}
               title={line.name}
               imageUrl={`${process.env.REACT_APP_STATIC_PATH}/${line.name.toLowerCase()}/${line.name.toLowerCase()}_1.jpg`}
               description={line.description}
+              onShowModal={this.props.onShowModal}
           />
       );
     }

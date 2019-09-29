@@ -3,13 +3,24 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+class CustomSlide extends React.Component {
+    render() {
+        return (
+            <div>
+                <img src={this.props.src} alt=""/>
+            </div>
+        );
+    }
+}
+
 export default class MiniatureSlider extends React.Component {
     render() {
+        const selectedLine = this.props.selectedLine;
         const settings = {
             customPaging: function(i) {
                 return (
                     <a>
-                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
+                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/${selectedLine}/${selectedLine}_${i+1}.jpg`} />
                     </a>
                 );
             },
@@ -38,18 +49,9 @@ export default class MiniatureSlider extends React.Component {
                     </div>
                 </div>
                 <Slider {...settings}>
-                    <div>
-                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
-                    </div>
-                    <div>
-                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
-                    </div>
-                    <div>
-                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
-                    </div>
-                    <div>
-                        <img alt={""} src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} />
-                    </div>
+                    {this.props.slides.map((image, index) => {
+                        return <CustomSlide src={image} key={index} />
+                    })}
                 </Slider>
             </div>
         );

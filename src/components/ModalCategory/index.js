@@ -12,7 +12,11 @@ export default class ModalCategory extends Component {
     render() {
         return (
             <section className="ModalCategory-wrapper close-area" onClick={this.closeModal}>
-                <MiniatureSlider onClose={() => this.closeModal.bind(this)} />
+                <MiniatureSlider
+                    onClose={() => this.closeModal.bind(this)}
+                    slides={this.props.slides}
+                    selectedLine={this.props.selectedLine}
+                />
             </section>
         );
     }

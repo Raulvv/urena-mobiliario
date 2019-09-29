@@ -4,20 +4,24 @@ import $ from 'jquery';
 export default class ProductLine extends Component {
     onSelectCategory () {
         $('.ModalCategory-wrapper').fadeIn();
+        this.props.onShowModal(this.props.title.toLowerCase())
     }
-  render() {
-    return (
-      <div className="ProductLine-item" onClick={this.onSelectCategory}>
-        <div className="ProductLine-img-preview">
-            <img src={this.props.imageUrl} alt=""/>
-            <div className="ProductLine-item-title">
-              <h3>{ this.props.title }</h3>
+
+    render() {
+        return (
+          <div className="ProductLine-item" onClick={() => {
+              this.onSelectCategory()
+          }}>
+            <div className="ProductLine-img-preview">
+                <img src={this.props.imageUrl} alt=""/>
+                <div className="ProductLine-item-title">
+                  <h3>{ this.props.title }</h3>
+                </div>
             </div>
-        </div>
-        <p>
-          {this.props.description}
-        </p>
-      </div>
-    );
-  }
+            <p>
+              {this.props.description}
+            </p>
+          </div>
+        );
+    }
 }
