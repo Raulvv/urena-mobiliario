@@ -14,7 +14,7 @@ export default class ContactForm extends Component {
     privacy: false
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.resetForm();
   }
 
