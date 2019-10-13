@@ -62,7 +62,7 @@
 
 .Header-container {
   align-items: center;
-  background-color: #253469;
+  background-color: white;
   color: white;
   display: flex;
   height: 15vh;
@@ -78,6 +78,7 @@
   min-width: 500px;
   margin-left: auto;
   justify-content: flex-end;
+  border-left: 0.5px solid rgb(15, 114, 191);
 }
 
 .Nav-item {
@@ -115,13 +116,12 @@
 
 .Filter-item {
   align-items: center;
-  background-color: #6180ef;
-  color: white;
   display: flex;
   height: 50px;
   justify-content: center;
   width: 150px;
   border-radius: 8px;
+  border: solid 1px #6180ef;
   cursor: pointer;
 }
 
@@ -132,7 +132,7 @@
 }
 
 .Filter-item a, .Filter-item a:visited, .Filter-item a:active {
-  color: white;
+  color: #6180ef;
   text-decoration: none;
 }
 
@@ -143,31 +143,60 @@
   width: 100%;
 }
 
-.slick-slider {
+.MainContainer .slider-wrapper {
+  height: 85vh;
+}
+
+.MainContainer .slick-slider {
+  width: 100%;
+  height: 77vh;
+  margin: 0 auto;
+}
+
+.MainContainer .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.MainContainer .slick-slider img {
+  margin: auto;
+  width: 800px;
+}
+
+.MainContainer .slick-slider .slick-dots .slick-active button:before {
+  color: rgb(91, 183, 255);
+}
+
+.MainContainer .slick-slider .slick-dots button:before {
+  color: black;
+  opacity: 1;
+}
+
+.ModalCategory-wrapper .slick-slider {
   width: 70%;
   height: 50vh;
   margin: 50px auto;
 }
 
-.MainContainer .slick-slider img {
+.ModalCategory-wrapper .slick-slider img {
   margin: auto;
   max-width: 800px;
   min-width: 600px;
   width: 50%;
 }
 
-.MainContainer .slick-arrow {
-  z-index: 1;
-}
+/*.MainContainer .slick-arrow {*/
+/*  z-index: 1;*/
+/*}*/
 
-.MainContainer .slick-arrow:before {
-  color: black;
-  font-size: 70px;
-}
+/*.MainContainer .slick-arrow:before {*/
+/*  color: black;*/
+/*  font-size: 70px;*/
+/*}*/
 
-.MainContainer .slick-dots li.slick-active button:before {
-  color: #253469;
-}
+/*.MainContainer .slick-dots li.slick-active button:before {*/
+/*  color: #253469;*/
+/*}*/
 
 .MainContainer-mainInfo {
   align-items: center;

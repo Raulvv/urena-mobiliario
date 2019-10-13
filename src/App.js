@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import ModalCategory from "./components/ModalCategory";
 import Filter from './components/Filter';
 import ProductLineExpositor from './components/ProductLineExpositor';
+import CustomSlider from "./components/CustomSlider";
 
 class App extends Component {
     state = {
@@ -80,6 +81,7 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <MainContainer>
+                    <CustomSlider />
                     <Filter onFilter={(category, items) => this.onFilter(category, items)}/>
                     <section id="categories">
                         {this.renderCategories()}

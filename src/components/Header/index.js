@@ -7,7 +7,7 @@ export default class Header extends Component {
       <header className="Header-container">
         <div className="Header-logo">
           <a href="/">
-            <img src={`${process.env.REACT_APP_STATIC_PATH}/logo.jpg`} alt="logo"/>
+            <img src={`${process.env.REACT_APP_STATIC_PATH}/logo2.jpg`} alt="logo"/>
           </a>
         </div>
         <Nav />

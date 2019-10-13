@@ -29,24 +29,24 @@ export default class CustomSlider extends React.Component {
   render() {
     let settings = {
       dots: true,
-      arrows: true,
       accessibility: true,
       center: true,
       infinite: true,
       slidesToShow: 1,
-      speed: 500,
-      nextArrow: <NextArrow />,
-      prevArrow: <PrevArrow />
+      speed: 500
     };
 
     return (
       <section className="slider-wrapper">
         <Slider {...settings}>
           <div>
-            <img src={`${process.env.REACT_APP_STATIC_PATH}/ESPECIAL/call%20center%20baja.jpg`} alt="slide" />
+            <img src={`${process.env.REACT_APP_STATIC_PATH}/look/look_1.jpg`} alt="slide" />
           </div>
           <div>
-            <img src={`${process.env.REACT_APP_STATIC_PATH}/ROPEROS/ureña02_ok.jpg`} alt="slide" />
+            <img src={`${process.env.REACT_APP_STATIC_PATH}/arco/arco_6.jpg`} alt="slide" />
+          </div>
+          <div>
+            <img src={`${process.env.REACT_APP_STATIC_PATH}/armario_persiana/armario_persiana_7.jpg`} alt="slide" />
           </div>
         </Slider>
       </section>
