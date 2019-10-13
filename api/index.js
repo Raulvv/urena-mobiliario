@@ -19,7 +19,7 @@ module.exports = async function(req, res) {
 
   var mail = {
     from: name,
-    to: 'umobiliario@umobiliario.com',
+    to: 'raul.vega.dv@gmail.com',
     subject: `Contact from ${name}`,
     text: content
   };
