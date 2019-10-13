@@ -391,8 +391,8 @@ body {
 
 .MiniatureSlider-wrapper {
   width: 80%;
-  height: 90vh;
-  margin: 20px auto;
+  height: 100vh;
+  margin: 0 auto;
   background-color: white;
 }
 
