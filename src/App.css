@@ -399,7 +399,7 @@ body {
 .MiniatureSlider-wrapper .slick-dots {
   display: flex !important;
   justify-content: center;
-  bottom: -300px;
+  top: calc(100vh - 200px);
   height: 180px;
   flex-wrap: wrap;
 }
