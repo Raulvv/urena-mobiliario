@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import $ from 'jquery';
 import InputForm from '../InputForm';
 import TextareaForm from '../TextareaForm';
 
@@ -25,11 +26,19 @@ export default class ContactForm extends Component {
         alert("Message failed to send.")
       }
 
+      this.showGreetingsMessage();
       this.resetForm();
     })
   }
 
+  showGreetingsMessage() {
+    $('#contact-form').hide();
+    $('.greetings-message').show();
+  }
+
   resetForm(){
+    $('#contact-form').css("display", "flex");
+    $('.greetings-message').css("display", "none");
     document.getElementById('contact-form').reset();
   }
 
@@ -54,7 +63,6 @@ export default class ContactForm extends Component {
   }
 
   onPrivacyChange(event) {
-    console.log(this.state)
     this.setState({privacy: !this.state.privacy});
   }
 
@@ -79,6 +87,10 @@ export default class ContactForm extends Component {
           </div>
           <button type="submit" className="btn btn-primary submit-btn">Solicitar informacion</button>
         </form>
+
+        <div className="greetings-message">
+          <p>¡Gracias! Le contactaremos en breve</p>
+        </div>
       </div>
     );
   }
