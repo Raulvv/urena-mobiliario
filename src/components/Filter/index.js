@@ -37,12 +37,6 @@ export default class Filter extends Component {
                         <a href="#"><span>Armarios</span></a>
                     </div>
                 </nav>
-                <div
-                    className="Filter-item clear-filter"
-                    onClick={() => this.props.onFilter()}
-                >
-                    <a href="#"><span>Todas las categorias</span></a>
-                </div>
             </div>
         );
     }
