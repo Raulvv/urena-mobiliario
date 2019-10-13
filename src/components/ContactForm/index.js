@@ -77,7 +77,7 @@ export default class ContactForm extends Component {
             />
             <label>He leido y acepto los terminos y condiciones</label>
           </div>
-          <button type="submit" className="btn btn-primary submit-btn">Submit</button>
+          <button type="submit" className="btn btn-primary submit-btn">Solicitar informacion</button>
         </form>
       </div>
     );
