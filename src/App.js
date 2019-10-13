@@ -14,8 +14,7 @@ class App extends Component {
             {name: "Mesas", numberOfItems: 3},
             {name: "Roperos", numberOfItems: 1},
             {name: "Cajoneras", numberOfItems: 2},
-            {name: "Archivo", numberOfItems: 2},
-            {name: "Armarios", numberOfItems: 3},
+            {name: "Archivo", numberOfItems: 2}
         ],
         slides: [],
         selectedLine: ""
@@ -60,8 +59,7 @@ class App extends Component {
             {name: "Mesas", numberOfItems: 3},
             {name: "Roperos", numberOfItems: 1},
             {name: "Cajoneras", numberOfItems: 2},
-            {name: "Archivo", numberOfItems: 2},
-            {name: "Armarios", numberOfItems: 3},
+            {name: "Archivo", numberOfItems: 2}
         ];
 
         if (category) {
