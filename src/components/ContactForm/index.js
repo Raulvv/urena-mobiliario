@@ -14,6 +14,10 @@ export default class ContactForm extends Component {
     privacy: false
   };
 
+  componentWillMount() {
+    this.resetForm();
+  }
+
   handleSubmit(e){
     e.preventDefault();
 
@@ -27,8 +31,7 @@ export default class ContactForm extends Component {
       }
 
       this.showGreetingsMessage();
-      this.resetForm();
-    })
+    });
   }
 
   showGreetingsMessage() {
