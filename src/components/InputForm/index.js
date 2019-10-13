@@ -13,6 +13,7 @@ export default class InputForm extends Component {
             className={inputClass}
             id={this.props.id}
             onChange={this.props.onChange}
+            required={true}
           />
       </div>
     );

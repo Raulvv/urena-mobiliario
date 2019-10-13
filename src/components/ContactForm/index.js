@@ -9,7 +9,8 @@ export default class ContactForm extends Component {
     company: "",
     phone: "",
     email: "",
-    message: ""
+    message: "",
+    privacy: false
   };
 
   handleSubmit(e){
@@ -52,6 +53,11 @@ export default class ContactForm extends Component {
     this.setState({message: event.target.value});
   }
 
+  onPrivacyChange(event) {
+    console.log(this.state)
+    this.setState({privacy: !this.state.privacy});
+  }
+
   render() {
     return (
       <div className="MainContainer-contact-form">
@@ -61,7 +67,17 @@ export default class ContactForm extends Component {
           <InputForm label="Telefono" id="phone" onChange={this.onPhoneChange.bind(this)} />
           <InputForm label="Email" id="email" onChange={this.onEmailChange.bind(this)} type="email" />
           <TextareaForm label="Consulta" id="message" onChange={this.onMessageChange.bind(this)} />
-          <button type="submit" className="btn btn-primary">Submit</button>
+          <div className="form-group privacy-wrapper">
+            <input
+                type="checkbox"
+                className={`form-control input-privacy`}
+                id="privacy"
+                onChange={this.onPrivacyChange.bind(this)}
+                required={true}
+            />
+            <label>He leido y acepto los terminos y condiciones</label>
+          </div>
+          <button type="submit" className="btn btn-primary submit-btn">Submit</button>
         </form>
       </div>
     );
